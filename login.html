@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Nature Scapes</title>
+    <style>
+        /* All Styles */
+        body {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/LpageWallpaper.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+
+        .login-box {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 20px;
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .input-group { margin-bottom: 20px; text-align: left; }
+        .input-group label { display: block; margin-bottom: 8px; font-size: 14px; }
+        .input-group input { 
+            width: 100%; 
+            padding: 12px; 
+            border-radius: 8px; 
+            border: none; 
+            box-sizing: border-box; 
+            background: rgba(255, 255, 255, 0.9);
+            color: #333;
+        }
+
+        /* Login Button */
+        .btn-link {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: #ffd700; 
+            color: black;
+            text-decoration: none; /* Remove the underline */
+            font-weight: bold;
+            border-radius: 8px;
+            margin-top: 25px;
+            font-size: 16px;
+            transition: 0.3s;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+
+        .btn-link:hover {
+            background-color: white;
+            transform: scale(1.03);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: rgba(255,255,255,0.7);
+            text-decoration: none;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <h2>Nature Scapes</h2>
+        <p>Log In to Continue</p>
+
+        <div class="input-group">
+            <label>Email</label>
+            <input type="email" placeholder="example@gmail.com">
+        </div>
+
+        <div class="input-group">
+            <label>Password</label>
+            <input type="password" placeholder="••••••••">
+        </div>
+
+        <a href="index.html" class="btn-link">LOG IN NOW</a>
+
+        <a href="index.html" class="back-link">← Back to Home</a>
+    </div>
+
+</body>
+</html>

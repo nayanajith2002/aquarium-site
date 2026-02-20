@@ -1,0 +1,54 @@
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('LpageWallpaper.jpg'); 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    width: 85%;
+    max-width: 900px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand-section { color: white; flex: 1; padding-right: 30px; }
+.brand-section h1 { font-size: 60px; margin: 0; }
+
+.login-box {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    padding: 40px;
+    border-radius: 15px;
+    width: 350px;
+    border: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+}
+
+.input-group { margin-bottom: 20px; text-align: left; }
+.input-group label { display: block; color: white; margin-bottom: 5px; }
+.input-group input { width: 100%; padding: 10px; border-radius: 5px; border: none; box-sizing: border-box; }
+
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    background: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    /* බටන් එක ක්ලික් එක අරගන්න ඕන නිසා මේක වැදගත් */
+    position: relative;
+    z-index: 100;
+}
+
+.login-btn:hover { background: #ffd700; }
+.signup-text, .back-link { color: white; margin-top: 15px; display: block; text-decoration: none; }

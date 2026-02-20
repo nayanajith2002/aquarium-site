@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fish Details - Nature Scapes</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* 1. DARK MODE BASE */
+        body { 
+            background-color: #0d0d0d; 
+            margin: 0; 
+            font-family: 'Poppins', sans-serif; 
+            color: #ffffff; 
+        }
+        .container { max-width: 1200px; margin: 80px auto; display: flex; gap: 40px; padding: 20px; }
+
+        /* 2. PRODUCT UI */
+        .product-left { flex: 1; background: #181818; padding: 15px; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); border: 1px solid #333; }
+        .product-left img { width: 100%; border-radius: 10px; object-fit: cover; }
+        .product-right { flex: 1.5; padding: 10px 20px; }
+        .price-container { background: #222; padding: 20px 30px; border-radius: 12px; margin-bottom: 25px; display: inline-block; border-left: 5px solid #ffcc00; }
+        .price-container .currency { font-size: 24px; color: #ffcc00; font-weight: bold; }
+        .price-container .amount { font-size: 45px; color: #ffcc00; font-weight: 900; }
+
+        /* 3. HOME BUTTON (TOP LEFT) */
+        .home-btn-new { 
+            position: fixed; top: 20px; left: 20px; 
+            background: #ffcc00; color: #000; 
+            width: 50px; height: 50px; border-radius: 50%; 
+            display: flex; justify-content: center; align-items: center; 
+            z-index: 2000; box-shadow: 0 4px 15px rgba(0,0,0,0.5); text-decoration: none;
+        }
+
+        /* 4. CART TRIGGER (TOP RIGHT) */
+        .cart-trigger-new { 
+            position: fixed; top: 20px; right: 20px; 
+            background: #ffcc00; color: #000; 
+            width: 50px; height: 50px; border-radius: 50%; 
+            display: flex; justify-content: center; align-items: center; 
+            z-index: 2000; cursor: pointer; box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+        }
+
+        /* 5. DARK CART & POSITION FIX */
+        #cart-sidebar {
+            background-color: #121212 !important; 
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100vh !important;
+            color: white !important;
+            border-left: 1px solid #333 !important;
+        }
+
+        #cart-items-container {
+            order: 2 !important; 
+            flex: 1 1 auto !important;
+            overflow-y: auto !important;
+            background: transparent !important;
+        }
+
+        .cart-footer, #cart-sidebar-footer, [style*="bottom: 0"] {
+            order: 1 !important; 
+            position: relative !important;
+            bottom: auto !important;
+            background: #1a1a1a !important;
+            padding: 20px !important;
+            display: block !important;
+            width: 100% !important;
+            box-sizing: border-box !important;
+            border-bottom: 1px solid #333 !important;
+        }
+
+        .cart-footer button, .checkout-btn, .clear-cart-btn, [onclick*="checkout"], [onclick*="clear"] {
+            background: #ffcc00 !important;
+            color: #000 !important;
+            font-weight: 900 !important;
+            border-radius: 10px !important;
+            padding: 14px !important;
+            margin-bottom: 10px !important;
+            border: none !important;
+            width: 100% !important;
+            cursor: pointer !important;
+        }
+
+        #cart-icon, .cart-spacer, #cart-sidebar > h2 + div:not(#cart-items-container) { 
+            display: none !important; 
+        }
+        
+        
+
+        input#qty { 
+            background: #333; 
+            color: white; 
+            border: 1px solid #444; 
+            padding: 8px; 
+            border-radius: 5px; 
+            width: 60px; 
+            text-align: center;
+        }
+
+        .action-btns { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+            margin-top: 20px; 
+            max-width: 300px; 
+        }
+
+        .action-btns button {
+            width: 100%; 
+            padding: 14px; 
+            font-size: 15px; 
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        
+
+    </style>
+</head>
+<body>
+
+<a href="index.html" class="home-btn-new" title="Home">
+    <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+</a>
+
+<div class="cart-trigger-new" onclick="toggleCart()">
+    🛒 <span id="cart-count-nav" style="position:absolute; top:-5px; right:-5px; background:white; color:black; border-radius:50%; padding:2px 6px; font-size:11px; font-weight:bold;">0</span>
+</div>
+
+<div class="container">
+    <div class="product-left">
+        <a href="fish.html" style="text-decoration:none; color:#888; display:block; margin-bottom:15px;">← Back to Collection</a>
+        <img id="fishImage" src="" alt="Fish Image">
+    </div>
+    <div class="product-right">
+        <h1 id="fishTitle">Fish Name</h1>
+        <p id="fishScientific" style="color:#4db8ff; font-style:italic;"></p>
+        <div class="price-container">
+            <span class="currency">LKR</span> 
+            <span class="amount" id="fishPrice">000</span>
+        </div>
+        <div style="margin:20px 0;">
+            <strong>Quantity:</strong> 
+            <input type="number" id="qty" value="1" min="1">
+        </div>
+        <div class="action-btns">
+            <button style="background:#ffcc00; color:#000; border:none;" onclick="buyNowWhatsApp()">Buy now</button>
+            <button style="background:transparent; color:#ffcc00; border:2px solid #ffcc00;" onclick="addToCart()">Add to cart</button>
+        </div>
+    </div>
+</div>
+
+<script src="cart.js"></script>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    document.getElementById('fishTitle').innerText = urlParams.get('name') || "Fish";
+    document.getElementById('fishScientific').innerText = urlParams.get('sci') || "";
+    document.getElementById('fishPrice').innerText = (urlParams.get('price') || "0").replace(/[^\d]/g, '');
+    document.getElementById('fishImage').src = urlParams.get('img') || "";
+
+    function addToCart() {
+        const item = {
+            name: document.getElementById('fishTitle').innerText,
+            price: parseInt(document.getElementById('fishPrice').innerText),
+            img: document.getElementById('fishImage').src,
+            qty: parseInt(document.getElementById('qty').value)
+        };
+        let cart = JSON.parse(localStorage.getItem('myCart')) || [];
+        cart.push(item);
+        localStorage.setItem('myCart', JSON.stringify(cart));
+        document.getElementById('cart-count-nav').innerText = cart.length;
+        if (typeof updateCartUI === "function") { updateCartUI(); toggleCart(); }
+    }
+
+    function buyNowWhatsApp() {
+        const name = document.getElementById('fishTitle').innerText;
+        const total = parseInt(document.getElementById('fishPrice').innerText) * parseInt(document.getElementById('qty').value);
+        window.open(`https://wa.me/947XXXXXXXX?text=Hello, I want to buy ${name}.Total: LKR ${total}`, '_blank');
+    }
+
+    setInterval(() => {
+        const sidebar = document.getElementById('cart-sidebar');
+        const footer = document.querySelector('.cart-footer') || document.querySelector('[style*="bottom: 0"]');
+        const oldIcon = document.getElementById('cart-icon');
+
+        if (sidebar && footer) {
+            sidebar.style.display = 'flex';
+            sidebar.style.flexDirection = 'column';
+            footer.style.order = '1';
+            document.getElementById('cart-items-container').style.order = '2';
+            footer.style.position = 'relative';
+            footer.style.bottom = 'auto';
+            footer.style.background = '#1a1a1a';
+        }
+        if (oldIcon) oldIcon.style.display = 'none';
+    }, 100);
+
+    window.onload = () => {
+        let cart = JSON.parse(localStorage.getItem('myCart')) || [];
+        document.getElementById('cart-count-nav').innerText = cart.length;
+    };
+</script>
+</body>
+</html>

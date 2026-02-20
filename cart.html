@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <style>
+        body { background: #0f171a; color: white; font-family: sans-serif; padding: 20px; }
+        .cart-item { 
+            background: #1a2a30; padding: 15px; border-radius: 10px; 
+            display: flex; align-items: center; margin-bottom: 10px; border: 1px solid #444;
+        }
+        .cart-item img { width: 80px; height: 80px; border-radius: 5px; margin-right: 20px; }
+        .details { flex-grow: 1; }
+        .total-box { margin-top: 20px; font-size: 24px; text-align: right; color: #ffd700; }
+        button { background: #e62e04; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 5px; }
+    </style>
+</head>
+<body>
+    <h1>🛒 My Shopping Cart</h1>
+    <div id="cartList"></div>
+    <div class="total-box" id="totalPrice"></div>
+    <br>
+    <button onclick="clearCart()">Clear Cart</button>
+    <button onclick="window.location.href='index.html'" style="background:#4db8ff;">Back to Shop</button>
+
+    <script>
+        function displayCart() {
+            let cart = JSON.parse(localStorage.getItem('myCart')) || [];
+            let cartList = document.getElementById('cartList');
+            let total = 0;
+            cartList.innerHTML = "";
+
+            cart.forEach((item, index) => {
+                cartList.innerHTML += `
+                    <div class="cart-item">
+                        <img src="${item.img}">
+                        <div class="details">
+                            <h3>${item.name}</h3>
+                            <p>Quantity: ${item.qty} | Price: ${item.price}</p>
+                        </div>
+                        <button onclick="removeItem(${index})">Remove</button>
+                    </div>`;
+            });
+        }
+
+        function removeItem(index) {
+            let cart = JSON.parse(localStorage.getItem('myCart'));
+            cart.splice(index, 1);
+            localStorage.setItem('myCart', JSON.stringify(cart));
+            displayCart();
+        }
+
+        function clearCart() {
+            localStorage.removeItem('myCart');
+            displayCart();
+        }
+
+        displayCart();
+    </script>
+</body>
+</html>

@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop - Nature Scapes</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Shop Page එකටම ආවේණික CSS */
+        .shop-container { padding: 50px 8%; text-align: center; }
+        .product-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 25px; margin-top: 30px; margin-bottom: 60px;
+        }
+        .fish-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px; border-radius: 15px; transition: 0.3s;
+        }
+        .fish-card:hover { transform: translateY(-10px); border-color: #ffd700; }
+        .fish-card img { width: 100%; height: 180px; object-fit: cover; border-radius: 10px; }
+        .price { color: #ffd700; font-size: 20px; font-weight: bold; margin: 10px 0; }
+        .section-title { font-size: 32px; color: white; margin-top: 40px; border-bottom: 2px solid #ffd700; display: inline-block; padding-bottom: 10px; }
+    </style>
+</head>
+<body class="shop-body">
+    <div class="shop-container">
+        <a href="index.html" style="color: white; text-decoration: none;">← Back to Home</a>
+        
+        <div id="fish-section">
+            
+    <h1 id="fish-section">🐟 My Fish Collection</h1>
+
+    <div class="container">
+
+        <div class="fish-card">
+            <img src="p (1).jpeg">
+            <h3>Neon Tetra</h3>
+            <span class="scientific-name">Paracheirodon innesi</span>
+            <div class="price">රු. 120</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (2).jpeg">
+            <h3>Roseline Shark</h3>
+            <span class="scientific-name">Sahyadria denisonii</span>
+            <div class="price">රු. 450</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (3).jpeg">
+            <h3>Denison Barb</h3>
+            <span class="scientific-name">Sahyadria denisonii</span>
+            <div class="price">රු. 400</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (4).jpeg">
+            <h3>Blue Danio</h3>
+            <span class="scientific-name">Danio kerri</span>
+            <div class="price">රු. 100</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (5).jpeg">
+            <h3>Glass Tetra</h3>
+            <span class="scientific-name">Prionobrama filigera</span>
+            <div class="price">රු. 150</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (6).jpeg">
+            <h3>Rummy Nose Tetra</h3>
+            <span class="scientific-name">Hemigrammus rhodostomus</span>
+            <div class="price">රු. 180</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (7).jpeg">
+            <h3>Cardinal Tetra</h3>
+            <span class="scientific-name">Paracheirodon axelrodi</span>
+            <div class="price">රු. 200</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (8).jpeg">
+            <h3>Whiptail Catfish</h3>
+            <span class="scientific-name">Rineloricaria lanceolata</span>
+            <div class="price">රු. 650</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (9).jpeg">
+            <h3>YoYo Loach</h3>
+            <span class="scientific-name">Botia almorhae</span>
+            <div class="price">රු. 350</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (10).jpeg">
+            <h3>Corydoras Catfish</h3>
+            <span class="scientific-name">Corydoras punctatus</span>
+            <div class="price">රු. 250</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (11).jpeg">
+            <h3>Harlequin Rasbora</h3>
+            <span class="scientific-name">Trigonostigma heteromorpha</span>
+            <div class="price">රු. 150</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (12).jpeg">
+            <h3>Tiger Barb</h3>
+            <span class="scientific-name">Puntigrus tetrazona</span>
+            <div class="price">රු. 100</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (13).jpeg">
+            <h3>Cherry Barb</h3>
+            <span class="scientific-name">Puntius titteya</span>
+            <div class="price">රු. 80</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (14).jpeg">
+            <h3>Zebra Danio</h3>
+            <span class="scientific-name">Danio rerio</span>
+            <div class="price">රු. 60</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (15).jpeg">
+            <h3>White Cloud Minnow</h3>
+            <span class="scientific-name">Tanichthys albonubes</span>
+            <div class="price">රු. 120</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (16).jpeg">
+            <h3>Silver Shark</h3>
+            <span class="scientific-name">Balantiocheilos melanopterus</span>
+            <div class="price">රු. 350</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (17).jpeg">
+            <h3>Kissing Gourami</h3>
+            <span class="scientific-name">Helostoma temminckii</span>
+            <div class="price">රු. 280</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (18).jpeg">
+            <h3>Clown Loach</h3>
+            <span class="scientific-name">Chromobotia macracanthus</span>
+            <div class="price">රු. 450</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (19).jpeg">
+            <h3>Blue Gourami</h3>
+            <span class="scientific-name">Trichopodus trichopterus</span>
+            <div class="price">රු. 180</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (20).jpeg">
+            <h3>Gold Barb</h3>
+            <span class="scientific-name">Barbodes semifasciolatus</span>
+            <div class="price">රු. 120</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (21).jpeg">
+            <h3>Red Tail Shark</h3>
+            <span class="scientific-name">Epalzeorhynchos bicolor</span>
+            <div class="price">රු. 300</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (22).jpeg">
+            <h3>Rainbow Shark</h3>
+            <span class="scientific-name">Epalzeorhynchos frenatum</span>
+            <div class="price">රු. 280</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (23).jpeg">
+            <h3>Albino Corydoras</h3>
+            <span class="scientific-name">Corydoras aeneus</span>
+            <div class="price">රු. 150</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (24).jpeg">
+            <h3>Glass Catfish</h3>
+            <span class="scientific-name">Kryptopterus vitreolus</span>
+            <div class="price">රු. 220</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (25).jpeg">
+            <h3>Otocinclus Catfish</h3>
+            <span class="scientific-name">Otocinclus vittatus</span>
+            <div class="price">රු. 400</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (26).jpeg">
+            <h3>Boesemani Rainbow</h3>
+            <span class="scientific-name">Melanotaenia boesemani</span>
+            <div class="price">රු. 550</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (27).jpeg">
+            <h3>Celebes Rainbow</h3>
+            <span class="scientific-name">Marosatherina ladigesi</span>
+            <div class="price">රු. 320</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (28).jpeg">
+            <h3>Red Eye Tetra</h3>
+            <span class="scientific-name">Moenkhausia sanctaefilomenae</span>
+            <div class="price">රු. 120</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (29).jpeg">
+            <h3>Columbian Tetra</h3>
+            <span class="scientific-name">Hyphessobrycon columbianus</span>
+            <div class="price">රු. 180</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (30).jpeg">
+            <h3>Buenos Aires Tetra</h3>
+            <span class="scientific-name">Hyphessobrycon anisitsi</span>
+            <div class="price">රු. 100</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (31).jpeg">
+            <h3>Honey Gourami</h3>
+            <span class="scientific-name">Trichogaster chuna</span>
+            <div class="price">රු. 250</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (32).jpeg">
+            <h3>Moonlight Gourami</h3>
+            <span class="scientific-name">Trichopodus microlepis</span>
+            <div class="price">රු. 300</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (33).jpeg">
+            <h3>Sterba's Corydoras</h3>
+            <span class="scientific-name">Corydoras sterbai</span>
+            <div class="price">රු. 450</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (34).jpeg">
+            <h3>Panda Corydoras</h3>
+            <span class="scientific-name">Corydoras panda</span>
+            <div class="price">රු. 380</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (35).jpeg">
+            <h3>Peppered Corydoras</h3>
+            <span class="scientific-name">Corydoras paleatus</span>
+            <div class="price">රු. 150</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (36).jpeg">
+            <h3>Electric Blue Ram</h3>
+            <span class="scientific-name">Mikrogeophagus ramirezi</span>
+            <div class="price">රු. 850</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (37).jpeg">
+            <h3>Golden Ram</h3>
+            <span class="scientific-name">Mikrogeophagus ramirezi</span>
+            <div class="price">රු. 750</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (38).jpeg">
+            <h3>Bolivian Ram</h3>
+            <span class="scientific-name">Mikrogeophagus altispinosus</span>
+            <div class="price">රු. 600</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p (39).jpeg">
+            <h3>German Blue Ram</h3>
+            <span class="scientific-name">Mikrogeophagus ramirezi</span>
+            <div class="price">රු. 700</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p1.jpeg">
+            <h3>Flowerhorn Cichlid</h3>
+            <span class="scientific-name">Cichlasoma sp.</span>
+            <div class="price">රු. 2500</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p2.jpeg">
+            <h3>Tiger Oscar</h3>
+            <span class="scientific-name">Astronotus ocellatus</span>
+            <div class="price">රු. 850</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p3.jpeg">
+            <h3>Frontosa Cichlid</h3>
+            <span class="scientific-name">Cyphotilapia frontosa</span>
+            <div class="price">රු. 1500</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p4.jpeg">
+            <h3>Electric Blue Johanni</h3>
+            <span class="scientific-name">Pseudotropheus johannii</span>
+            <div class="price">රු. 450</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p5.jpeg">
+            <h3>Electric Yellow Lab</h3>
+            <span class="scientific-name">Labidochromis caeruleus</span>
+            <div class="price">රු. 350</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p6.jpeg">
+            <h3>Convict Cichlid</h3>
+            <span class="scientific-name">Amatitlania nigrofasciata</span>
+            <div class="price">රු. 150</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p7.jpeg">
+            <h3>Firemouth Cichlid</h3>
+            <span class="scientific-name">Thorichthys meeki</span>
+            <div class="price">රු. 400</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p8.jpeg">
+            <h3>Jack Dempsey</h3>
+            <span class="scientific-name">Rocio octofasciata</span>
+            <div class="price">රු. 650</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p9.jpeg">
+            <h3>Electric Blue Acara</h3>
+            <span class="scientific-name">Andinoacara pulcher</span>
+            <div class="price">රු. 950</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+        <div class="fish-card">
+            <img src="p10.jpeg">
+            <h3>Gold Severum</h3>
+            <span class="scientific-name">Heros severus</span>
+            <div class="price">රු. 800</div>
+            <button class="add-btn">Add to Cart 🛒</button>
+        </div>
+
+    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
